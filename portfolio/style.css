@@ -1,0 +1,143 @@
+@font-face {
+	font-family: "neue_montrealbold";
+	src: url("neuemontreal-bold-webfont.woff2") format("woff2"), url("neuemontreal-bold-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "neue_montreallight";
+	src: url("neuemontreal-light-webfont.woff2") format("woff2"), url("neuemontreal-light-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "neue_montrealmedium";
+	src: url("neuemontreal-medium-webfont.woff2") format("woff2"), url("neuemontreal-medium-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "neue_montrealregular";
+	src: url("neuemontreal-regular-webfont.woff2") format("woff2"), url("neuemontreal-regular-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+:root {
+	--font-light: "neue_montreallight", sans-serif;
+	--font-regular: "neue_montrealregular", sans-serif;
+	--font-medium: "neue_montrealmedium", sans-serif;
+	--font-bold: "neue_montrealbold", sans-serif;
+	--color-primary: #d4c9c9;
+	--color-secondary: #222222;
+	--color-tertiary: #ffffff;
+	--color-accent: #ff50ed;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--color-primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+	font-family: var(--font-bold);
+	color: var(--color-secondary);
+}
+
+/****************** HEADER ******************/
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem;
+}
+
+.get-in-touch_container {
+	width: 60vw;
+	height: 4vh;
+	overflow: hidden;
+	border: solid 2px var(--color-accent);
+	border-radius: 999px;
+
+	display: flex;
+	align-items: center;
+}
+.get-in-touch p {
+	white-space: nowrap;
+}
+
+.menu {
+	position: relative;
+	width: 4rem;
+	height: 100%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: end;
+	gap: 0.6em;
+}
+
+.stroke1,
+.stroke2 {
+	height: 2px;
+	width: 100%;
+	background-color: var(--color-secondary);
+	border-radius: 999px;
+}
+
+.stroke1 {
+	width: 69%;
+}
+
+@media screen and (min-width: 600px) {
+	.get-in-touch_container {
+		width: 25vw;
+	}
+}
+
+/****************** SECTION 1 ******************/
+.section_1 {
+	width: 100vw;
+	height: 100vh;
+
+	padding-top: 6rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.section_1 > div {
+	width: 100%;
+}
+
+h2 {
+	padding-inline: 1rem;
+	line-height: 11.8vw;
+	letter-spacing: -0.8vw;
+}
+.name {
+	font-size: 15vw;
+}
+.position {
+	font-size: 13vw;
+	color: var(--color-tertiary);
+}
+
+.position:first-child {
+}
