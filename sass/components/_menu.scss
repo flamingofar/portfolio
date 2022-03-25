@@ -1,0 +1,66 @@
+@use "../abstracts/variables";
+@use "../base/typography";
+
+.menu_open {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+
+	padding: 4rem;
+	z-index: 4;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+
+	background: variables.$color-secondary;
+}
+
+.menu_open * {
+	color: variables.$color-tertiary;
+}
+.menu_open > div:first-child a {
+	font-size: 15vw;
+	text-decoration: none;
+}
+.menu_open .spacer {
+	height: 0.1rem;
+	width: 100%;
+	background: variables.$color-tertiary;
+	margin-bottom: 2rem;
+}
+
+.menu_open ul {
+	display: flex;
+	gap: 5vw;
+}
+.menu_open ul i {
+	font-size: clamp(2rem, -2rem + 10.6667vw, 6rem);
+}
+.menu_open a,
+.menu_open a:before,
+.menu_open a:after {
+	font-family: typography.$font-regular;
+}
+.menu_open a {
+	position: relative;
+}
+.menu_open .links a:first-child:before {
+	content: "PROJECTS";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 26vw;
+	opacity: 0;
+	transition: 250ms;
+}
+
+.menu_open .link a:before:hover {
+	opacity: 1;
+}
+
+.hidden {
+	display: none;
+}

@@ -1,0 +1,58 @@
+@use "../abstracts/variables";
+@use "../base/typography";
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem;
+
+	z-index: 5;
+}
+
+.get-in-touch_container {
+	width: 60vw;
+	height: 4vh;
+	overflow: hidden;
+	border: solid 2px variables.$color-accent;
+	border-radius: 999px;
+
+	display: flex;
+	align-items: center;
+}
+.get-in-touch p {
+	white-space: nowrap;
+}
+
+.menu {
+	position: relative;
+	width: 4rem;
+	height: 100%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: end;
+	gap: 0.6em;
+}
+
+.stroke1,
+.stroke2 {
+	height: 2px;
+	width: 100%;
+	background-color: variables.$color-secondary;
+	border-radius: 999px;
+}
+
+.stroke1 {
+	width: 69%;
+}
+
+@media screen and (min-width: 600px) {
+	.get-in-touch_container {
+		width: 25vw;
+	}
+}
