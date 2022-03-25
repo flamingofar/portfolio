@@ -12,6 +12,7 @@
     "vite": "^2.8.0"
   },
   "dependencies": {
+    "@grcmichael/gscroll": "^1.0.15",
     "gsap": "^3.9.1"
   }
 }

@@ -18,8 +18,18 @@ h5,
 p {
 	font-family: typography.$font-bold;
 	color: variables.$color-secondary;
+	display: inline-block;
 }
 
 ul {
 	list-style: none;
+}
+
+body {
+	overflow: hidden;
+}
+
+span {
+	white-space: pre;
+	display: inline-block;
 }
