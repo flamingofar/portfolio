@@ -25,11 +25,18 @@ ul {
 	list-style: none;
 }
 
-body {
+body,
+main {
 	overflow: hidden;
 }
 
 span {
 	white-space: pre;
 	display: inline-block;
+}
+
+img {
+	width: 100%;
+	height: auto;
+	display: block;
 }

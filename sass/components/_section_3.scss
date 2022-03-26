@@ -1,9 +1,11 @@
 @use "../abstracts/variables";
 @use "../base/typography";
 
-.section_2 {
+.section_3 {
 	width: 100vw;
+	height: 100vh;
 	overflow: hidden;
+	// background-color: blue;
 
 	.pin-start {
 		width: 100%;
@@ -11,6 +13,7 @@
 		flex-direction: column;
 		justify-content: flex-start;
 		align-items: center;
+		background-color: pink;
 		padding-top: calc(50vw - 15vw);
 	}
 
@@ -25,44 +28,9 @@
 		justify-self: center;
 		align-self: center;
 		text-align: center;
+		background-color: blue;
 		display: inline-block;
 
 		// transform: translateX(100%);
-	}
-
-	.text {
-		text-align: center;
-		p {
-			margin-bottom: 1rem;
-			font-size: 2vw;
-		}
-	}
-
-	.img_container {
-		width: 100%;
-		height: auto;
-		display: grid;
-		grid-template-columns: repeat(10, 1fr);
-
-		& div:nth-child(1) {
-			grid-area: 2/3/2/3;
-		}
-		& div:nth-child(2) {
-			grid-area: 1/7/1/7;
-		}
-		& div:nth-child(3) {
-			grid-area: 3/5/3/5;
-		}
-		& div:nth-child(4) {
-			grid-area: 4/6/4/6;
-		}
-	}
-
-	.projects {
-		height: 100%;
-	}
-
-	img {
-		opacity: 0.5;
 	}
 }
