@@ -68,7 +68,7 @@ splashTitles.forEach((title) => {
 ScrollTrigger.create({
 	trigger: ".section_1 .pin-start",
 	start: "top top",
-	end: 100,
+	end: 50,
 	pin: true,
 	// markers: true,
 	id: "RANDOM",
@@ -80,12 +80,13 @@ projectsTitle.innerHTML = spanLetter(projectsTitle);
 //! **************************** PROJECT TITLE ******************************
 const projectsTitleTl = gsap.timeline({
 	scrollTrigger: {
+		id: "PROJECT-TITLE",
 		trigger: ".section_2 .pin-start",
 		start: "top top",
 		end: "500",
 		scrub: true,
 		pin: true,
-		markers: true,
+		// markers: true,
 	},
 });
 
@@ -95,41 +96,92 @@ projectsTitleTl
 		{ opacity: 0 },
 		{
 			opacity: 1,
+			duration: 0.5,
 		}
 	)
 	.to(".section_2 .title span", { opacity: 0, stagger: { each: 0.1, from: "center" } });
 
+//! **************************** PROJECTS ******************************
+gsap.set(".section_2 .img_container", {
+	z: 2,
+});
 const projectsTl = gsap.timeline({
 	scrollTrigger: {
 		id: "PROJECTS",
 		trigger: ".section_2 .pin-start",
 		start: "top top",
-		end: "+=" + 1000,
+		end: "+=" + 6000,
+		scrub: true,
+		pin: true,
+		// markers: true,
+	},
+});
+
+projectsTl
+	.from(
+		".projects .text",
+		{
+			y: "100%",
+			opacity: 0,
+			delay: 0.55,
+			duration: 2,
+		},
+		0
+	)
+	.from(
+		".img_container div",
+
+		{
+			autoAlpha: 0.5,
+			y: 1300,
+			duration: 3,
+		},
+		"<"
+	)
+	.to(".section_2", {
+		opacity: 0,
+	});
+// .set(".section_2", {
+// 	height: "-=" + 1500,
+// });
+
+//****************************** SKILLS ANIMATIONS ******************************
+const skillsTitle = document.querySelector(".section_3 .title");
+skillsTitle.innerHTML = spanLetter(skillsTitle);
+//! **************************** SKILLS TITLE ******************************
+const skillsTitleTl = gsap.timeline({
+	scrollTrigger: {
+		id: "SKILLS-TITLE",
+		trigger: ".section_3 .pin-start",
+		start: "top top",
+		end: "500",
 		scrub: true,
 		pin: true,
 		markers: true,
 	},
 });
 
-projectsTl
-	.fromTo(
-		".projects .text",
-		{
-			opacity: 0,
-			y: 0,
-		},
-		{ opacity: 1, y: "-100%", duration: 0.2, delay: 0.55 },
-		0
-	)
-	.fromTo(
-		".img_container img",
-		{
-			opacity: 0,
-			y: 0,
-		},
-		{
-			opacity: 1,
-			y: -1300,
-		},
-		"<"
-	);
+skillsTitleTl.from(".section_3 .title", { opacity: 0 }).to(".section_3 .title span", {
+	opacity: 0,
+	stagger: { each: 0.1, from: "center" },
+});
+
+//! **************************** SKILLS ******************************
+const skillsTl = gsap.timeline({
+	scrollTrigger: {
+		id: "SKILLS",
+		trigger: ".section_3 .pin-start",
+		start: "top  top",
+		end: "+=" + 10000,
+		scrub: true,
+		pin: true,
+		markers: true,
+	},
+});
+
+skillsTl.from(".skills .icon", { opacity: 0, stagger: { amount: 1 } }).to(".skills .icon", {
+	opacity: 0,
+	stagger: {
+		amount: 1,
+	},
+});

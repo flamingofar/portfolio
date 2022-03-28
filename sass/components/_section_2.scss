@@ -4,8 +4,10 @@
 .section_2 {
 	width: 100vw;
 	overflow: hidden;
+	// background: rgb(124, 187, 124);
 
 	.pin-start {
+		position: relative;
 		width: 100%;
 		display: flex;
 		flex-direction: column;
@@ -26,12 +28,14 @@
 		align-self: center;
 		text-align: center;
 		display: inline-block;
+		// background: lightcoral;
 
 		// transform: translateX(100%);
 	}
 
 	.text {
 		text-align: center;
+		// background: lightblue;
 		p {
 			margin-bottom: 1rem;
 			font-size: 2vw;
@@ -39,10 +43,17 @@
 	}
 
 	.img_container {
+		position: absolute;
+		z-index: 2;
+		top: 0;
+		left: 0;
 		width: 100%;
+		padding: 2rem;
 		height: auto;
 		display: grid;
 		grid-template-columns: repeat(10, 1fr);
+
+		// background: rgba(255, 0, 0, 0.438);
 
 		& div:nth-child(1) {
 			grid-area: 2/3/2/3;
@@ -60,9 +71,5 @@
 
 	.projects {
 		height: 100%;
-	}
-
-	img {
-		opacity: 0.5;
 	}
 }
