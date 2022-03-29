@@ -15,10 +15,12 @@ h2,
 h3,
 h4,
 h5,
-p {
+p,
+li {
 	font-family: typography.$font-bold;
 	color: variables.$color-secondary;
 	display: inline-block;
+	line-height: 81%;
 }
 
 ul {
@@ -39,4 +41,34 @@ img {
 	width: 100%;
 	height: auto;
 	display: block;
+}
+
+a {
+	text-decoration: none;
+	color: variables.$color-secondary;
+}
+
+main {
+	display: grid;
+	grid-template-columns:
+		minmax(1rem, 1fr)
+		minmax(auto, 1400px)
+		minmax(1rem, 1fr);
+	gap: 1rem 0;
+}
+/* Every direct child of main gets positioned in the middle column */
+main > * {
+	grid-column: 2;
+}
+
+/* Every element with the class .full inherits the grid, 
+  and fills up the three columns */
+.full {
+	display: inherit;
+	grid: inherit;
+	grid-column: 1 / -1;
+}
+/* Every child of .full fills up the middle column */
+.full > * {
+	grid-column: 2;
 }

@@ -1,0 +1,24 @@
+@use "../abstracts/variables";
+@use "../base/typography";
+
+.next_project_btn {
+	background-color: transparent;
+	border: 1px solid variables.$color-secondary;
+	border-radius: 999px;
+	font-size: 1.25rem;
+	padding: 0.6rem 1rem;
+	margin-bottom: 0.5rem;
+
+	i {
+		font-size: 1.5rem;
+		color: variables.$color-secondary;
+	}
+}
+
+.cta_btn {
+	border: 2px solid variables.$color-accent;
+	border-radius: 999px;
+	font-size: 1.25rem;
+	padding: 0.4rem 1rem;
+	margin-bottom: 0.5rem;
+}

@@ -1,0 +1,113 @@
+@use "../abstracts/variables";
+@use "../base/typography";
+
+.project1 {
+	height: 92vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	.project_wrapper {
+		margin-top: 4rem;
+		display: flex;
+		justify-content: space-evenly;
+		flex-direction: column;
+		gap: 2rem;
+	}
+	.title {
+		display: flex;
+		flex-direction: column;
+
+		& > * {
+			font-size: 7.5rem;
+			font-family: typography.$font-medium;
+			opacity: 85%;
+		}
+	}
+
+	.details_container {
+		display: flex;
+		height: 35vh;
+		gap: 3rem;
+		& > div {
+			flex: 1;
+		}
+
+		// IMAGE CONTAINER
+		& > div:first-child {
+			display: flex;
+			align-items: flex-end;
+			justify-content: flex-end;
+
+			background-blend-mode: hard-light;
+			background-image: linear-gradient(#d4c9c9, #d4c9c9), url("../../public/placeholder-9x16.jpg");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center top;
+
+			p {
+				font-size: 1.1rem;
+				margin: 0.5rem;
+			}
+			span {
+				font-family: typography.$font-light;
+				text-transform: uppercase;
+			}
+		}
+		// DETAILS CONTAINER
+		& > div:last-child {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			p {
+				font-size: 1.5rem;
+				font-family: typography.$font-medium;
+				line-height: 100%;
+			}
+		}
+	}
+	.details {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+	}
+	.details_tech {
+		font-size: 1.1rem;
+		margin-bottom: 0.5rem;
+	}
+	ul {
+		display: flex;
+		flex-direction: column;
+		li {
+			font-size: 1rem;
+			font-family: typography.$font-medium;
+
+			&:not(:last-child) {
+				margin-bottom: 0.5rem;
+			}
+		}
+	}
+
+	.project_count {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		gap: 1.5rem;
+
+		.btn_container {
+			flex: 1;
+			display: flex;
+			justify-content: flex-end;
+		}
+		button {
+		}
+
+		h2 {
+			font-size: 9rem;
+
+			span {
+				font-family: typography.$font-light;
+			}
+		}
+	}
+}

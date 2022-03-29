@@ -2,17 +2,49 @@
 @use "../base/typography";
 
 header {
-	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100vw;
+	height: 8vh;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	padding: 1rem;
 
 	z-index: 5;
-}
 
+	ul {
+		display: flex;
+		gap: 1rem;
+
+		li {
+			position: relative;
+			font-family: typography.$font-medium;
+			font-size: 1.6rem;
+			cursor: pointer;
+
+			&:before,
+			.name_header:before {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 2px;
+				background-color: #222222;
+
+				transform-origin: right;
+				transform: scaleX(0);
+				transition: transform 250ms;
+			}
+			&:hover::before,
+			.name_header:hover:before {
+				transform: scaleX(1);
+				transform-origin: left;
+			}
+		}
+	}
+}
 .get-in-touch_container {
 	width: 60vw;
 	height: 4vh;
@@ -22,33 +54,36 @@ header {
 
 	display: flex;
 	align-items: center;
-}
-.get-in-touch p {
-	white-space: nowrap;
+	.get-in-touch p {
+		white-space: nowrap;
+	}
+	.get-in-touch {
+		display: flex;
+	}
 }
 
-.menu {
+.name_header {
 	position: relative;
-	width: 4rem;
-	height: 100%;
+	color: variables.$color-secondary;
+	font-family: typography.$font-medium;
+	font-size: 1.6rem;
+	&:before {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		background-color: #222222;
 
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: end;
-	gap: 0.6em;
-}
-
-.stroke1,
-.stroke2 {
-	height: 2px;
-	width: 100%;
-	background-color: variables.$color-secondary;
-	border-radius: 999px;
-}
-
-.stroke1 {
-	width: 69%;
+		transform-origin: right;
+		transform: scaleX(0);
+		transition: transform 250ms;
+	}
+	&:hover:before {
+		transform: scaleX(1);
+		transform-origin: left;
+	}
 }
 
 @media screen and (min-width: 600px) {

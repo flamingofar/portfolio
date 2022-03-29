@@ -11,12 +11,13 @@
 
 //* COMPONENTS
 @use "./components/header";
-@use "./components/section_1";
-@use "./components/section_2";
-@use "./components/section_3";
-@use "./components/section_4";
 @use "./components/menu";
+@use "./components/buttons";
 
 //* PAGES
+@use "./components/index";
+@use "./pages/about";
+@use "./pages/work";
+@use "./pages/contact";
 
 //* THEMES
