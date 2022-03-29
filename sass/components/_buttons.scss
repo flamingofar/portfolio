@@ -5,17 +5,19 @@
 	background-color: transparent;
 	border: 1px solid variables.$color-secondary;
 	border-radius: 999px;
-	font-size: 1.25rem;
+	font-size: 1rem;
 	padding: 0.6rem 1rem;
 	margin-bottom: 0.5rem;
 
 	i {
-		font-size: 1.5rem;
+		font-size: 1.2rem;
 		color: variables.$color-secondary;
 	}
 }
 
 .cta_btn {
+	font-family: typography.$font-medium;
+	font-size: 1rem;
 	border: 2px solid variables.$color-accent;
 	border-radius: 999px;
 	font-size: 1.25rem;

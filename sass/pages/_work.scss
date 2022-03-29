@@ -39,8 +39,8 @@
 			align-items: flex-end;
 			justify-content: flex-end;
 
-			background-blend-mode: hard-light;
-			background-image: linear-gradient(#d4c9c9, #d4c9c9), url("../../public/placeholder-9x16.jpg");
+			// background-blend-mode: hard-light;
+			background-image: url("../../public/mockup-test2.png");
 			background-repeat: no-repeat;
 			background-size: cover;
 			background-position: center top;
@@ -48,6 +48,8 @@
 			p {
 				font-size: 1.1rem;
 				margin: 0.5rem;
+				color: variables.$color-tertiary;
+				font-family: typography.$font-medium;
 			}
 			span {
 				font-family: typography.$font-light;
@@ -98,8 +100,7 @@
 			flex: 1;
 			display: flex;
 			justify-content: flex-end;
-		}
-		button {
+			gap: 0.3rem;
 		}
 
 		h2 {
