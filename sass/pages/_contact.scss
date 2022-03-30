@@ -1,2 +1,63 @@
 @use "../abstracts/variables";
 @use "../base/typography";
+
+.contact_container {
+	height: 92vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	.contact_details_wrapper {
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.contact_details {
+		display: flex;
+		gap: 2rem;
+
+		.contact_address {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+		h2 {
+			font-size: 2.93rem;
+			font-family: typography.$font-medium;
+		}
+	}
+
+	.contact_links {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		p {
+			font-size: 1.6rem;
+			font-family: typography.$font-medium;
+
+			i {
+				font-size: 1.3rem;
+			}
+		}
+	}
+	.contact_icons {
+		display: flex;
+		justify-content: space-between;
+
+		& > * {
+			font-size: 2.7rem;
+		}
+	}
+
+	.title {
+		margin-bottom: 2rem;
+		h2 {
+			font-size: 9rem;
+			font-family: typography.$font-medium;
+		}
+	}
+}

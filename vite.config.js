@@ -6,9 +6,12 @@ module.exports = defineConfig({
 		rollupOptions: {
 			input: {
 				main: resolve(__dirname, "index.html"),
-				nested: resolve(__dirname, "html/about/about.html"),
-				nested: resolve(__dirname, "html/work/about.html"),
-				nested: resolve(__dirname, "html/contact/about.html"),
+				nested: resolve(__dirname, "html/about.html"),
+				nested: resolve(__dirname, "html/project1.html"),
+				nested: resolve(__dirname, "html/project2.html"),
+				nested: resolve(__dirname, "html/project3.html"),
+				nested: resolve(__dirname, "html/project4.html"),
+				nested: resolve(__dirname, "html/contact.html"),
 			},
 		},
 	},
