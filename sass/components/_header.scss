@@ -11,6 +11,10 @@ header {
 
 	z-index: 5;
 
+	h4 span {
+		display: block;
+	}
+
 	& > * {
 		flex: 1;
 		display: flex;
@@ -58,8 +62,7 @@ header {
 	}
 
 	.get-in-touch_container {
-		margin-inline: 15rem;
-		height: 1.6rem;
+		height: 2.4rem;
 		overflow: hidden;
 		border: solid 2px variables.$color-accent;
 		border-radius: 999px;

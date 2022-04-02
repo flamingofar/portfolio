@@ -29,8 +29,4 @@ const splashTitles = document.querySelectorAll(".section_1 .span");
 // });
 
 //****************************** GET IN TOUCH ANIMATION ******************************
-export function marqueeAnim() {
-	gsap.to(".marquee", { xPercent: -50, repeat: -1, duration: 16, ease: "linear" }).totalProgress(0.5);
-}
-
-marqueeAnim();
+gsap.to(".marquee", { xPercent: -50, repeat: -1, duration: 16, ease: "linear" }).totalProgress(0.5);

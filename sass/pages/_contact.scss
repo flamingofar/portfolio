@@ -17,23 +17,38 @@
 
 	.contact_details {
 		display: flex;
-		gap: 2rem;
+		gap: clamp(2rem, -1rem + 8vw, 5rem);
 
 		.contact_address {
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
+			gap: 0.8rem;
 		}
-		h2 {
-			font-size: 2.93rem;
-			font-family: typography.$font-medium;
+		h4 {
+			font-size: clamp(1.2rem, -0.5rem + 4.5333vw, 2.9rem);
+			font-family: typography.$font-regular;
+			vertical-align: middle;
+		}
+
+		.email,
+		.tlf {
+			font-family: typography.$font-light;
+		}
+
+		.email i {
+			font-size: clamp(1.2rem, 0.4rem + 2.1333vw, 2rem);
+			cursor: pointer;
+
+			transition: color 200ms;
+		}
+		.email i:hover {
+			color: #5c5b5b;
 		}
 	}
 
 	.contact_links {
 		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
 
 		p {
 			font-size: 1.6rem;
@@ -46,18 +61,40 @@
 	}
 	.contact_icons {
 		display: flex;
+		flex-direction: column;
 		justify-content: space-between;
 
 		& > * {
 			font-size: 2.7rem;
+		}
+
+		i {
+			transition: color 200ms;
+			cursor: pointer;
+		}
+		i:hover {
+			color: variables.$color-hover;
 		}
 	}
 
 	.title {
 		margin-bottom: 2rem;
 		h2 {
-			font-size: 9rem;
+			font-size: clamp(4rem, -0.9rem + 13.0667vw, 8.9rem);
 			font-family: typography.$font-medium;
+		}
+	}
+
+	.copied {
+		position: relative;
+		span {
+			pointer-events: none;
+			position: absolute;
+			left: 0;
+			top: 0;
+			font-size: 1.2rem;
+
+			opacity: 0;
 		}
 	}
 }

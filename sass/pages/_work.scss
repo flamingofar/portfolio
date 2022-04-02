@@ -3,13 +3,16 @@
 
 .project1 {
 	height: 92vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+
+	& > * {
+		grid-column: span 3;
+	}
 
 	.project_wrapper {
 		margin-top: 4rem;
-		display: flex;
+		display: grid;
 		justify-content: space-evenly;
 		flex-direction: column;
 		gap: 2rem;
@@ -19,7 +22,8 @@
 		flex-direction: column;
 
 		& > * {
-			font-size: 7.5rem;
+			font-size: clamp(4rem, 0.5rem + 9.3333vw, 7.5rem);
+
 			font-family: typography.$font-medium;
 			opacity: 85%;
 		}
@@ -27,7 +31,6 @@
 
 	.details_container {
 		display: flex;
-		height: 35vh;
 		gap: 3rem;
 		& > div {
 			flex: 1;
@@ -40,7 +43,7 @@
 			justify-content: flex-end;
 
 			// background-blend-mode: hard-light;
-			background-image: url("../../public/mockup-test2.png");
+			background-image: url("/mockup-test2.png");
 			background-repeat: no-repeat;
 			background-size: cover;
 			background-position: center top;
@@ -72,6 +75,11 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-end;
+
+		div:last-child {
+			display: flex;
+			gap: 0.3em;
+		}
 	}
 	.details_tech {
 		font-size: 1.1rem;
@@ -102,13 +110,35 @@
 			display: flex;
 			justify-content: flex-end;
 			gap: 0.3rem;
+
+			button {
+				font-size: clamp(0.5rem, 0.1rem + 1.0667vw, 0.9rem);
+			}
 		}
 
 		h2 {
-			font-size: 9rem;
-
-			span {
+			font-size: clamp(4rem, -0.5rem + 12vw, 8.5rem);
+			w span {
 				font-family: typography.$font-light;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.project1 {
+		.details_container {
+			flex-direction: column;
+
+			& > div:first-child {
+				height: 16rem;
+			}
+
+			& > div {
+				flex: none;
+			}
+			.details {
+				margin-top: 1rem;
 			}
 		}
 	}

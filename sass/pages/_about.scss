@@ -3,24 +3,18 @@
 
 .about_container {
 	height: 92vh;
-	width: 100vw;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
-
+	display: grid;
 	.about_details_wrapper {
-		height: 100%;
-		width: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		justify-self: center;
+		align-self: flex-end;
 	}
 
 	.about_details {
-		display: flex;
-		justify-content: center;
-		width: 60vw;
+		display: grid;
+
+		grid-template-columns: 1fr 1fr;
+		gap: 4rem;
+
 		& > * {
 			flex: 1;
 		}
@@ -30,6 +24,7 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		max-width: 100ch;
 
 		p {
 			font-size: 1.3rem;
@@ -40,7 +35,8 @@
 	.tech {
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
+		justify-content: flex-end;
+		gap: 0.5rem;
 		h2 {
 			font-size: 6.25rem;
 			font-family: typography.$font-medium;
@@ -52,10 +48,11 @@
 	}
 
 	.title {
+		place-self: end;
 		margin-bottom: 2rem;
 
 		h2 {
-			font-size: 9rem;
+			font-size: clamp(4rem, -0.9rem + 13.0667vw, 8.9rem);
 		}
 		h2:first-child {
 			font-family: typography.$font-light;
@@ -63,5 +60,11 @@
 		h2:last-child {
 			font-family: typography.$font-medium;
 		}
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.about_container .about_details {
+		grid-template-columns: 1fr;
 	}
 }
