@@ -47,9 +47,19 @@
 		}
 	}
 
+	.title_container {
+		display: flex;
+		margin-bottom: 2rem;
+		align-items: flex-end;
+
+		.img_container {
+			max-width: 13vw;
+			height: auto;
+		}
+	}
+
 	.title {
 		place-self: end;
-		margin-bottom: 2rem;
 
 		h2 {
 			font-size: clamp(4rem, -0.9rem + 13.0667vw, 8.9rem);

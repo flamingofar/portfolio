@@ -1,7 +1,7 @@
 @use "../abstracts/variables";
 @use "../base/typography";
 
-.project1 {
+.project {
 	height: 92vh;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -20,6 +20,11 @@
 	.title {
 		display: flex;
 		flex-direction: column;
+		justify-content: flex-end;
+
+		h2 {
+			text-transform: uppercase;
+		}
 
 		& > * {
 			font-size: clamp(4rem, 0.5rem + 9.3333vw, 7.5rem);
@@ -43,10 +48,6 @@
 			justify-content: flex-end;
 
 			// background-blend-mode: hard-light;
-			background-image: url("/mockup-test2.png");
-			background-repeat: no-repeat;
-			background-size: cover;
-			background-position: center top;
 
 			p {
 				font-size: 1.1rem;
@@ -88,13 +89,19 @@
 	ul {
 		display: flex;
 		flex-direction: column;
+		list-style: initial;
 		li {
 			font-size: 1rem;
 			font-family: typography.$font-medium;
+			text-transform: uppercase;
 
 			&:not(:last-child) {
 				margin-bottom: 0.5rem;
 			}
+		}
+
+		& li::marker {
+			content: "🦩 ";
 		}
 	}
 
@@ -117,10 +124,44 @@
 		}
 
 		h2 {
-			font-size: clamp(4rem, -0.5rem + 12vw, 8.5rem);
-			w span {
+			font-size: clamp(2.7rem, -8.9rem + 23.2vw, 8.5rem);
+			span {
 				font-family: typography.$font-light;
 			}
+		}
+	}
+}
+
+[data-project="1"] {
+	.details_container {
+		& > div:first-child {
+			background-image: url("/mockup-test2.png");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center center;
+		}
+	}
+}
+
+[data-project="3"] {
+	.details_container {
+		& > div:first-child {
+			background-image: url("/advice_case_mockup.png");
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center center;
+			background-color: variables.$color-secondary;
+		}
+	}
+}
+[data-project="4"] {
+	.details_container {
+		& > div:first-child {
+			background-image: url("/color_palette_mockup.png");
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center center;
+			background-color: variables.$color-secondary;
 		}
 	}
 }

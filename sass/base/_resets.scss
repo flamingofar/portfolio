@@ -17,11 +17,15 @@ h2,
 h3,
 h4,
 h5,
-p,
-li {
+p {
 	font-family: typography.$font-bold;
 	color: variables.$color-secondary;
 	display: inline-block;
+	line-height: 81%;
+}
+li {
+	font-family: typography.$font-bold;
+	color: variables.$color-secondary;
 	line-height: 81%;
 }
 p {

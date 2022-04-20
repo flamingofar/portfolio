@@ -11,6 +11,9 @@ header {
 
 	z-index: 5;
 
+	//ANIMATION HELPER
+	overflow: hidden;
+
 	h4 span {
 		display: block;
 	}
@@ -35,7 +38,7 @@ header {
 		li {
 			position: relative;
 			font-family: typography.$font-medium;
-			font-size: 1.6rem;
+			font-size: clamp(1.1rem, -0.4rem + 4vw, 1.6rem);
 			padding-bottom: 0.2rem;
 			cursor: pointer;
 
@@ -84,7 +87,7 @@ header {
 		position: relative;
 		color: variables.$color-secondary;
 		font-family: typography.$font-medium;
-		font-size: 1.6rem;
+		font-size: clamp(1.1rem, -0.4rem + 4vw, 1.6rem);
 		padding-bottom: 0.2rem;
 
 		&:before {
