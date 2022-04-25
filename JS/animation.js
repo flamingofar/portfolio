@@ -10,34 +10,34 @@ barba.init({
 	debug: true,
 	sync: true,
 	transitions: [
-		{
-			//* FROM HOME TO PROJECT
-			name: "project",
-			// from: {
-			// 	namespace: ["home"],
-			// },
-			to: {
-				namespace: ["project"],
-			},
-			enter({ next }) {
-				animationProjectEnter(next.container);
-			},
-			leave: ({ current }) => animationHomeLeave(current.container),
-		},
-		{
-			//* FROM RPOJECT TO PROJECT
-			name: "project-to-project",
-			from: {
-				namespace: ["project"],
-			},
-			to: {
-				namespace: ["project"],
-			},
-			enter({ next }) {
-				animationProjectEnter(next.container);
-			},
-			leave: ({ current }) => animationProjectLeave(current.container),
-		},
+		// {
+		// 	//* FROM HOME TO PROJECT
+		// 	name: "project",
+		// 	// from: {
+		// 	// 	namespace: ["home"],
+		// 	// },
+		// 	to: {
+		// 		namespace: ["project"],
+		// 	},
+		// 	enter({ next }) {
+		// 		animationProjectEnter(next.container);
+		// 	},
+		// 	leave: ({ current }) => animationHomeLeave(current.container),
+		// },
+		// {
+		// 	//* FROM RPOJECT TO PROJECT
+		// 	name: "project-to-project",
+		// 	from: {
+		// 		namespace: ["project"],
+		// 	},
+		// 	to: {
+		// 		namespace: ["project"],
+		// 	},
+		// 	enter({ next }) {
+		// 		animationProjectEnter(next.container);
+		// 	},
+		// 	leave: ({ current }) => animationProjectLeave(current.container),
+		// },
 		{
 			//* TO HOME
 			name: "home",
@@ -51,26 +51,26 @@ barba.init({
 				animationHomeEnter(next.container);
 			},
 		},
-		{
-			//* TO ABOUT
-			name: "about",
-			to: {
-				namespace: ["about"],
-			},
-			// once({ next }) {
-			// 	// animationHomeEnter(next.container);
-			// 	return gsap.timeline().from(next.container, {
-			// 		duration: 1,
-			// 		opacity: 0,
-			// 	});
-			// },
-			enter({ next }) {
-				// animationHomeEnter(next.container);
-				return gsap.timeline().from(next.container, {
-					duration: 1,
-					opacity: 0,
-				});
-			},
-		},
+		// {
+		// 	//* TO ABOUT
+		// 	name: "about",
+		// 	to: {
+		// 		namespace: ["about"],
+		// 	},
+		// 	// once({ next }) {
+		// 	// 	// animationHomeEnter(next.container);
+		// 	// 	return gsap.timeline().from(next.container, {
+		// 	// 		duration: 1,
+		// 	// 		opacity: 0,
+		// 	// 	});
+		// 	// },
+		// 	enter({ next }) {
+		// 		// animationHomeEnter(next.container);
+		// 		return gsap.timeline().from(next.container, {
+		// 			duration: 1,
+		// 			opacity: 0,
+		// 		});
+		// 	},
+		// },
 	],
 });
