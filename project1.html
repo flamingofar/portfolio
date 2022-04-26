@@ -8,7 +8,7 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 		<title>Malte Skjoldager | Portfolio</title>
 	</head>
-	<body>
+	<body data-barba="wrapper">
 		<header>
 			<div>
 				<h4 class="name_header">
@@ -32,12 +32,12 @@
 			</nav>
 		</header>
 		<div class="wrapper" data-barba="container" data-barba-namespace="project">
-			<main data-scroll-container data-project="4">
+			<main data-scroll-container data-project="1">
 				<section class="project">
 					<div class="project_wrapper">
 						<div class="title">
-							<h2>color</h2>
-							<h2>palette designer</h2>
+							<h2>HOGWARTS</h2>
+							<h2>STUDENT LIST</h2>
 						</div>
 						<div class="details_container">
 							<div>
@@ -45,19 +45,20 @@
 								<p>YEAR/<span> 2022</span></p>
 							</div>
 							<div>
-								<p>For this project we had to make a color palette designer. With given color schemes we had to figure out how to provide the selected color scheme. Here i got to work with logic, a slight use of maths and problem solving.</p>
+								<p>This project was a final product of 5 weeks of intense Javascript. The assignment was to handle multiple JSON streams, clean up the incomming data, create rules for different conditions based on the students house, blood etc.</p>
 								<div class="details">
 									<div>
 										<h5 class="details_tech">TECHNOLOGIES AND TOOLS</h5>
 										<ul>
-											<li>Problem solving</li>
-											<li>DOM manipulation</li>
+											<li>Logic Implementation</li>
+											<li>Multiple api streams</li>
+											<li>Race conditions</li>
 											<li>HTML, CSS & JavaScript</li>
 										</ul>
 									</div>
 									<div>
-										<a class="cta_btn" href="https://github.com/malt0533/11C.03.04-Color-Palette-Designer">GITHUB</a>
-										<a class="cta_btn" href="https://malt0533.github.io/11C.03.04-Color-Palette-Designer/">SITE</a>
+										<a class="cta_btn" href="https://github.com/malt0533/11C.04.04-Hacked-Hogwarts-Student-List" target="_blank">GITHUB</a>
+										<a class="cta_btn" href="https://malt0533.github.io/11C.04.04-Hacked-Hogwarts-Student-List/" target="_blank">SITE</a>
 									</div>
 								</div>
 							</div>
@@ -65,15 +66,16 @@
 					</div>
 					<div class="project_count">
 						<div class="btn_container">
-							<a href="./project3.html" class="next_project_btn" data-btn="prev">PREV PROJECT <i class="fa-solid fa-angle-up"></i></a>
+							<!-- <a href="#" class="next_project_btn" data-btn="prev">PREV PROJECT <i class="fa-solid fa-angle-up"></i></a> -->
+							<a href="./project2.html" class="next_project_btn" data-btn="next">NEXT PROJECT <i class="fa-solid fa-angle-down"></i></a>
 						</div>
-						<h2>PROJECT<span data-projectNr="4">04</span><span data-totalprojects="4">/04</span></h2>
+						<h2>PROJECT<span data-projectNr="1">01</span><span data-totalprojects="4">/04</span></h2>
 					</div>
 				</section>
 			</main>
+			<script type="module" src="./main.js"></script>
+			<script type="module" src="./JS/work.js"></script>
+			<script src="./JS/animation.js"></script>
 		</div>
-
-		<script type="module" src="../main.js"></script>
-		<script type="module" src="../JS/work.js"></script>
 	</body>
 </html>
