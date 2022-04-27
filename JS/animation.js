@@ -11,7 +11,7 @@ barba.init({
 	sync: true,
 	transitions: [
 		{
-			//* FROM HOME TO PROJECT
+			//* TO PROJECT
 			name: "project",
 			// from: {
 			// 	namespace: ["home"],

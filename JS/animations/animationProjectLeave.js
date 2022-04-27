@@ -7,11 +7,15 @@ function animationProjectLeave(container) {
 	const tl = gsap.timeline({ defaults: { duration: 1 }, delay: 0.3 });
 	tl.to(h2, {
 		opacity: 0,
-		stagger: 0.4,
-	}).to(details, {
-		opacity: 0,
-		stagger: 0.4,
-	});
+		stagger: 0.2,
+	}).to(
+		details,
+		{
+			opacity: 0,
+			stagger: 0.2,
+		},
+		"-=0.5"
+	);
 
 	return tl;
 }
