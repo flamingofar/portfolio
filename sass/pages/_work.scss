@@ -27,7 +27,7 @@
 		}
 
 		& > * {
-			font-size: clamp(4rem, 0.5rem + 9.3333vw, 7.5rem);
+			font-size: clamp(2.5rem, -2.5rem + 13.3333vw, 7.5rem);
 
 			font-family: typography.$font-medium;
 			opacity: 85%;
@@ -66,7 +66,7 @@
 			flex-direction: column;
 			justify-content: space-between;
 			p {
-				font-size: 1.5rem;
+				font-size: 1.2rem;
 				font-family: typography.$font-medium;
 				line-height: 100%;
 			}
@@ -118,8 +118,9 @@
 			justify-content: flex-end;
 			gap: 0.3rem;
 
-			button {
-				font-size: clamp(0.5rem, 0.1rem + 1.0667vw, 0.9rem);
+			a {
+				font-size: clamp(1rem, 0.1rem + 1.0667vw, 0.9rem);
+				font-family: typography.$font-light;
 			}
 		}
 
@@ -180,19 +181,67 @@
 
 @media screen and (max-width: 800px) {
 	.project {
+		.project_count {
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-end;
+
+			.btn_container {
+				flex: 0;
+			}
+		}
+		.project_wrapper {
+			margin-top: 0;
+		}
 		.details_container {
 			flex-direction: column;
 
 			& > div:first-child {
-				height: 16rem;
+				position: relative;
+				height: 9rem;
+				p {
+					position: absolute;
+					margin: 0;
+				}
+				p:first-child {
+					top: 100%;
+					left: 0;
+				}
+				p:last-child {
+					top: 100%;
+					right: 0;
+				}
 			}
 
 			& > div {
 				flex: none;
 			}
 			.details {
+				display: flex;
+				flex-direction: column;
+				align-items: baseline;
+				gap: 0.7rem;
+
 				margin-top: 1rem;
 			}
+			.details ul {
+				margin-inline-start: 1.4rem;
+			}
+
+			.details div:last-child {
+				width: 100%;
+				gap: 1rem;
+				justify-content: center;
+			}
 		}
+	}
+
+	.next_project_btn {
+		font-size: 0.8rem;
+		margin-bottom: 0;
+	}
+	.next_project_btn i {
+		font-size: 0.8rem;
+		color: #222222;
 	}
 }
