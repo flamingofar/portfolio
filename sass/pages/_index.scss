@@ -25,3 +25,11 @@
 		color: variables.$color-tertiary;
 	}
 }
+@media screen and (max-width: 800px) {
+	.name {
+		font-size: 12vw;
+	}
+	.position {
+		font-size: 11vw;
+	}
+}
